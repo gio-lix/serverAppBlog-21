@@ -1,0 +1,45 @@
+.icons {
+  position: relative;
+
+  > div:first-child {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &_box {
+
+
+    position: absolute;
+    top: 43px!important;
+    left: -10px!important;
+    z-index: 200!important;
+    width: 240px!important;
+    min-height: 40px;
+    height: auto!important;
+    background-color: #ffffff !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    > span {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 2px;
+
+      &:hover {
+        background-color: #f2f2f3;
+      }
+    }
+  }
+}

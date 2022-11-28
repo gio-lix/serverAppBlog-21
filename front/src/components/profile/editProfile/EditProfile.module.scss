@@ -1,0 +1,153 @@
+@import "src/styles/variables";
+
+.edit {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  z-index: 60;
+  top: -20px;
+  right: 50%;
+  padding: 10px 35px;
+  transform: translateX(50%);
+  border: .5px solid rgb(231, 231, 231);
+  background: $bg-white;
+
+
+  .close {
+    border: none;
+    background: none;
+    position: absolute;
+    top: -2px;
+    right: 3px;
+    font-size: $font-xl-30;
+    cursor: pointer;
+  }
+
+  .image {
+    margin: 10px 0 20px 0;
+
+    > img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    > figcaption {
+      margin-bottom: 5px;
+    }
+  }
+
+  .fullname {
+    padding: 8px 70px 8px 10px;
+  }
+
+  div:not(:first-child) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    > label {
+      margin-bottom: 5px;
+      color: $gray-light-600;
+    }
+
+    > input {
+      outline: none;
+      padding: 8px 10px 8px 10px;
+      margin-bottom: 5px;
+      border: 1px solid $gray-light-500;
+    }
+
+    > select {
+      outline: none;
+      margin-bottom: 10px;
+      padding: 8px 10px 8px 10px;
+      border: 1px solid $gray-light-500;
+
+    }
+
+    > textarea {
+      outline: none;
+      resize: none;
+      padding: 8px 10px 8px 10px;
+      border: 1px solid $gray-light-500;
+    }
+
+    .fullname_cunt {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      color: $bg-red-500;
+    }
+
+    .textarea_count {
+      color: $bg-red-500;
+      margin: 5px;
+    }
+  }
+}
+
+.theme_dark {
+  background-color: black!important;
+  button {
+    color: whitesmoke;
+  }
+  input, textarea, select {
+    background-color: #7979b9;
+    color: white!important;
+  }
+  * label {
+    color: whitesmoke;
+  }
+}
+
+
+.save_button {
+  border: none;
+  width: 100%;
+  padding: 5px 0;
+  opacity: .6;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $bg-blue-250;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.images_group {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+
+  .loading_image {
+    width: 100px!important;
+    height: 100px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > label {
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .6;
+    font-weight: 600;
+    color: $bg-white;
+    background-color:  $bg-blue-250;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}

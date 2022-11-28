@@ -1,0 +1,16 @@
+.light_theme {
+  background-color: white;
+}
+
+.dark_theme {
+  background-color: #282828;
+  color: white;
+
+  .background_theme {
+    background: #131313;
+    border: 1px solid #363636;
+    box-shadow: 2px 4px 12px -4px rgb(0, 0, 0);
+
+  }
+}
+

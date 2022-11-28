@@ -1,0 +1,12 @@
+.grid_home {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+
+}
+
+.spinner_center {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

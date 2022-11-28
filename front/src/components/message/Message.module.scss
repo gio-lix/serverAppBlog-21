@@ -1,0 +1,588 @@
+@import "src/styles/variables";
+
+.leftSide {
+  &_icon {
+    display: flex;
+    justify-content: space-between;
+
+    * svg {
+      font-size: $font-md-15;
+      color: $gray-light-500;
+    }
+  }
+
+
+  &_active_icon {
+    cursor: pointer;
+
+    * svg {
+      color: $green-yellow-600;
+    }
+
+    h2 {
+      cursor: none;
+      text-decoration: none !important;
+    }
+  }
+
+  &_form {
+    height: 45px;
+    border-bottom: 1px solid black;
+
+    > input {
+      outline: none;
+      border: none;
+
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      font-size: $font-md-16;
+      background: transparent;
+
+    }
+
+    > button {
+      display: none;
+    }
+  }
+}
+
+
+.rightSide {
+  width: 100%;
+  height: calc(100vh - 100px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  &_media {
+    display: flex;
+
+    > span:not(:last-child) {
+      cursor: pointer;
+      margin-right: 20px;
+
+      > svg {
+        color: gray;
+        opacity: .7;
+        font-size: 18px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &_body_box {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    .chat_display {
+      position: absolute;
+      left: 0;
+      bottom: 60px;
+      width: 100%;
+      height: 90%;
+      padding: 10px;
+      overflow-y: scroll;
+      display: block;
+
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        border: 3px solid $bg-green-600;
+      }
+
+      background-color: #f7f7f8;
+
+      .msgDisplay_img_box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+
+        .msgDisplay_img {
+          display: inline-flex;
+          width: 150px;
+          height: auto;
+          margin: 2px 10px;
+        }
+      }
+
+      .chat_other {
+        justify-content: flex-start;
+        justify-items: flex-start;
+      }
+
+      .chat_row {
+        display: grid;
+        grid-template-columns: 70%;
+        margin-bottom: 10px;
+      }
+
+      .chat_me {
+        justify-content: flex-end;
+        justify-items: flex-end;
+
+        > span {
+          color: red;
+          cursor: pointer;
+        }
+      }
+
+      .chat_me .chat_text {
+        padding: 8px 10px;
+        margin-bottom: 5px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 1px solid $bg-blue-800;
+        background-color: $bg-blue-500;
+        color: $white;
+      }
+
+
+      .chat_other .chat_text {
+        padding: 20px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: 1px solid #b7b7b7;
+        background-color: $bg-white;
+      }
+
+      .chat_send_loading {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &_media {
+      position: relative;
+      display: inline-flex;
+      width: 90px;
+      height: 75px;
+
+      margin: 0 5px;
+      opacity: 1;
+
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #000000;
+          opacity: .4;
+        }
+
+        > span {
+          display: flex;
+        }
+      }
+
+      > span {
+        display: none;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        color: red;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      > img, video {
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+    &_form {
+      > form {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        display: flex;
+
+        .icons {
+          position: absolute;
+          left: -10px;
+          top: 0;
+          width: 60px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+
+        > div:nth-child(3) {
+          position: absolute;
+          left: calc(100% - 120px);
+          width: 70px !important;
+          height: 40px !important;
+
+          > label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100% !important;
+            font-size: 26px;
+            color: #9aff00;
+
+            > svg {
+              cursor: pointer;
+            }
+          }
+
+        }
+
+        > input {
+          outline: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: none;
+          border-top: 1px solid $bg-gray-light-500;
+
+          width: 100%;
+          height: 100%;
+          padding: 0 50px 0 50px;
+        }
+
+        > button {
+          outline: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: none;
+          border-top: 1px solid $bg-gray-light-500;
+          width: 70px;
+          cursor: pointer;
+          background-color: whitesmoke;
+
+          &:hover {
+            background-color: $bg-gray-light-400;
+          }
+        }
+      }
+    }
+
+    .chat_send_images {
+      width: 100%;
+      max-height: 50%;
+      height: auto;
+      position: absolute;
+      bottom: 40px;
+      padding: 10px;
+      background-color: white !important;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        border: 3px solid $bg-green-600;
+      }
+    }
+  }
+
+  &_deleteIcons {
+    display: flex;
+    justify-content: space-between;
+
+    * h2 {
+      text-decoration: none !important;
+      color: $blue-600 !important;
+    }
+
+    svg {
+      cursor: pointer;
+      font-size: $font-lg-20;
+      color: $red-500;
+    }
+  }
+}
+
+
+.chat {
+  display: flex;
+  flex-direction: column;
+
+  &_title {
+    margin-bottom: 10px;
+
+    > img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .chat_text {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &_time {
+    display: block;
+    font-size: $font-md-13;
+    color: $gray-light-500;
+  }
+}
+
+.rightSide_users_styles {
+  cursor: inherit !important;
+  width: 100%;
+  height: auto;
+
+
+  > div:first-child {
+    display: flex !important;
+    align-items: flex-start !important;
+
+    img {
+      margin-top: 7px;
+    }
+  }
+
+  * h2 {
+    cursor: inherit !important;
+    text-decoration: none !important;
+    max-width: 570px !important;
+    width: 100% !important;
+    overflow: hidden;
+
+    > p:first-child {
+      margin-bottom: 10px;
+    }
+
+    > p:nth-child(2) {
+      color: gray !important;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    > p:last-child {
+      height: 22px;
+      display: flex;
+      align-items: center;
+      color: $gray-light-600;
+
+      > span:first-child {
+        margin-right: 5px;
+      }
+
+      svg {
+        color: $green-mix-800 !important;
+      }
+    }
+  }
+}
+
+.icons_styles {
+  top: -150px !important;
+  left: 10px !important;
+  box-shadow: 19px 18px 19px -16px rgb(49, 49, 49);
+  border: 1px solid #818181;
+}
+
+.users_styles {
+  cursor: pointer;
+  width: 300px;
+  height: auto;
+
+  > div:first-child {
+    display: flex !important;
+    align-items: flex-start !important;
+
+    img {
+      margin-top: 7px;
+    }
+  }
+
+  * h2 {
+    cursor: inherit !important;
+    text-decoration: none !important;
+
+
+    > p:nth-child(2) {
+      color: gray !important;
+      font-size: 14px;
+    }
+
+    > p:last-child {
+      height: 22px;
+      display: flex;
+      align-items: center;
+      color: $gray-light-600;
+
+      > span:first-child {
+        margin-right: 5px;
+      }
+
+      svg {
+        color: $green-mix-800 !important;
+      }
+    }
+  }
+}
+
+.callModel {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+
+
+  &_calling_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    > span {
+      padding: 15px;
+      background-color: gray;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    > span:first-child {
+      color: $red-500;
+    }
+
+    > span:last-child {
+      color: $green-500;
+    }
+  }
+
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $bg-black;
+    opacity: .6;
+  }
+
+  > div:first-child {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    z-index: 70;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $bg-white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      margin-bottom: 4px;
+    }
+
+    h6 {
+      margin-bottom: 10px;
+    }
+
+    .calling {
+      margin-bottom: 20px;
+
+    }
+  }
+
+}
+
+.callModel_theme {
+  div:first-child {
+    background-color: #363636 !important;
+  }
+}
+
+.left_side_theme {
+  input {
+    color: $white !important;
+  }
+}
+
+.right_side_theme {
+
+  .chat_other .chat_text {
+    border: none !important;
+    color: whitesmoke !important;
+    background-color: $bg-gray-light-600 !important;
+  }
+
+  > div:nth-child(1) {
+    background-color: #0a0000 !important;
+    color: $white !important;
+
+    svg {
+      color: $red-500 !important;
+    }
+  }
+
+  > div:nth-child(2) {
+    * {
+      background-color: $bg-blue-mix-500 !important;
+      color: $white !important;
+    }
+  }
+
+  > div:nth-child(3) {
+    > form {
+      display: flex;
+      align-items: center;
+
+      > button {
+        height: 100% !important;
+        z-index: 10;
+      }
+
+      > div:nth-child(3) {
+        height: 90% !important;
+      }
+    }
+
+    * {
+      background-color: $bg-blue-mix-500 !important;
+      color: $white !important;
+    }
+  }
+}

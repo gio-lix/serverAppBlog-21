@@ -1,0 +1,39 @@
+.d-ib {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.j-c-between {
+  justify-content: space-between;
+}
+.j-c-center {
+  justify-content: center;
+}
+.a-i-center {
+  align-items: center;
+}
+.a-i-start {
+  align-items: flex-start;
+}
+.a-i-end {
+  align-items: flex-end;
+}
+
+.a-s-start {
+  align-self: flex-start;
+}
+.f-column {
+  flex-direction: column;
+}
+.f-row {
+  flex-direction: row;
+}
+.f-auto {
+  flex: 1 1 auto;
+}
+.m-auto {
+  margin: 0 auto;
+}

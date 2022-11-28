@@ -1,0 +1,44 @@
+@import "src/styles/variables";
+
+
+.root {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  z-index: 40;
+
+
+  > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+
+    > button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: $font-lg-20;
+    }
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    width: 200px;
+    margin: 4px 0;
+    padding: 0 5px;
+    border: 1px solid #ccd2d3;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $white;
+    background-color: $bg-white;
+    box-shadow: 10px 10px 23px -9px rgba(0,0,0,0.12);
+
+
+    > p {
+      line-height: 150%;
+    }
+  }
+}
+

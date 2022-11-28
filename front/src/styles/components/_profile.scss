@@ -1,0 +1,33 @@
+@import "src/styles/variables";
+
+.profile_tag {
+  display: flex;
+  justify-content: center;
+  height: 38px;
+  border-top: 1px solid $gray-light-400;
+  border-bottom: 1px solid $gray-light-400;
+  margin-bottom: 20px;
+
+  &_theme_button {
+    color: white!important;
+  }
+  &_theme_button_active {
+    color: greenyellow!important;
+  }
+  > button {
+    background: none;
+    cursor: pointer;
+    border: transparent;
+    width: 100px;
+    height: 100%;
+    margin: 0 20px;
+    font-size: $font-md-18;
+    font-weight: 500;
+  }
+}
+
+.active_tag {
+  border-top: 1.5px solid $blue-500 !important;
+  border-bottom: 1.5px solid $blue-500 !important;
+}
+

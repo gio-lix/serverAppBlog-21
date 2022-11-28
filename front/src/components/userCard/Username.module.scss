@@ -1,0 +1,54 @@
+@import "src/styles/variables";
+
+.user {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  min-width: 200px;
+  padding: 0 20px;
+  margin: 2px 0;
+  background-color: $bg-white;
+
+  &:hover {
+    background-color: $bg-gray-light-200;
+  }
+
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    > h2 {
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 8px 0;
+      &:hover {
+        cursor: inherit;
+        text-decoration: underline;
+      }
+    }
+    .img {
+      width: 30px!important;
+      height: 30px!important;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+      //opacity: .7;
+    }
+  }
+}
+
+.user_theme {
+  background-color: #3a3754!important;
+  color: white!important;
+
+  h2 {
+    &:hover {
+      text-decoration: underline;
+      color: greenyellow!important;
+    }
+  }
+}

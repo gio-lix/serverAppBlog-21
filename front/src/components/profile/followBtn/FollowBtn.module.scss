@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+
+.root {
+  position: relative;
+  width: 140px;
+  height: 40px;
+  border:$blue-200 1.5px solid;
+  background-color: transparent;
+  font-size: $font-md-16;
+  font-weight: 600;
+  color: $blue-200;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $bg-blue-200;
+    color: $white;
+  }
+
+  > img {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 20px;
+    transform: translateX(-25%);
+  }
+}

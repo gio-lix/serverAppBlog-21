@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+
+.message {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+
+  max-height: calc(100vh - 74px);
+  height: auto;
+
+
+
+  > section:first-child {
+     border-right: none;
+
+  }
+
+  > section {
+    border: 1px solid black;
+    background-color: $bg-white;
+
+  }
+
+
+  &_right_body {
+    height: calc(100vh - 74px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .messenger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      font-size: 70px;
+      color: $blue-600;
+
+      > span {
+        font-size: $font-xl-30;
+        color: $gray-light-500;
+      }
+    }
+  }
+}
+
+.message_theme {
+  > section {
+    background-color: #4f4f83!important;
+    svg{
+      color: whitesmoke!important;
+    }
+  }
+
+}
+

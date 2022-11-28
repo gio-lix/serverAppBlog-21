@@ -1,0 +1,124 @@
+@import "src/styles/variables";
+
+.loading {
+  width: 100%;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+
+    > img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    > div {
+      > h3 {
+        color: $gray-light-500;
+        font-size: $font-lg-25;
+        margin-bottom: 8px;
+      }
+
+      .follow {
+        display: flex;
+        margin-bottom: 8px;
+        color: $gray-light-500;
+
+        > span {
+          color: $blue-500;
+        }
+
+        > span:first-child {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        > span:last-child {
+          margin-left: 30px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .fullname {
+        color: $gray-light-600;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      .email {
+        color: $gray-light-600;
+        font-weight: 500;
+        margin-bottom: 7px;
+      }
+
+      .website {
+        font-size: $font-md-12;
+        opacity: .7;
+        color: $blue-600;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .story {
+        margin-top: 10px;
+      }
+    }
+
+
+    .button {
+      cursor: pointer;
+      width: 140px;
+      height: 40px;
+      border: $blue-200 1.5px solid;
+      background-color: transparent;
+      font-size: $font-md-16;
+      font-weight: 600;
+      color: $blue-200;
+
+      &:hover {
+        background-color: $bg-blue-250;
+        color: $white;
+      }
+    }
+  }
+
+  > h3 {
+    font-size: 20px;
+  }
+}
+
+.hover {
+  &::after {
+    content: "";
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: .6;
+    background: $bg-black;
+  }
+}
+

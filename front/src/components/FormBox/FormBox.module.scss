@@ -1,0 +1,52 @@
+@import "src/styles/variables";
+
+
+.root {
+  max-width: 70%;
+  min-height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #c9c9c9;
+  box-shadow: 11px 24px 47px -21px rgba(125,118,125,1);
+
+  > h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: $font-lg-22;
+    font-weight: 600;
+  }
+
+  .errorBox {
+    width: 70%;
+    height: 20px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    > h5 {
+      font-size: $font-md-14;
+    }
+  }
+
+
+  button {
+    padding: 8px 15px;
+    background-color: $bg-blue-600;
+    color: $bg-white;
+    opacity: .8;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.formBox_theme {
+  background-color: #3b3b64!important;
+  border: 1px solid #575757;
+  box-shadow: 11px 24px 47px -21px rgb(7, 7, 7);
+}

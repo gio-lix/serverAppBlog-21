@@ -1,0 +1,155 @@
+@import "src/styles/variables";
+
+.modal {
+  position: fixed;
+  z-index: 30;
+
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-black;
+    opacity: .5;
+  }
+
+  > form {
+    position: relative;
+    z-index: 10;
+    top: 80px;
+    left: 100%;
+    transform: translateX(-25%);
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    background-color: $bg-white;
+
+
+    > div:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-bottom: 1px solid $bg-gray-light-500;
+
+      > span {
+        font-size: $font-lg-20;
+        font-weight: 500;
+        cursor: pointer;
+
+      }
+    }
+
+    > div:nth-child(2) {
+      margin-bottom: 10px;
+
+      .stopStream {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        font-size: $font-lg-20;
+        color: $green-500;
+
+      }
+      > textarea {
+        border: none;
+        resize: none;
+        outline: none;
+        width: 100%;
+        height: 150px;
+      }
+      .imageBox {
+        width: 370px;
+        max-height: 200px;
+        overflow-y: auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        margin-bottom: 10px;
+        gap: 3px;
+
+        > div {
+          position: relative;
+
+          &:hover {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #9fb4bb;
+              opacity: .3;
+              mix-blend-mode: screen;
+            }
+          }
+
+          > img {
+            width: 100%;
+          }
+
+          > span {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 5;
+            font-size: $font-lg-20;
+
+          }
+        }
+      }
+      .file {
+        display: flex;
+        justify-content: center;
+
+        svg {
+          cursor: pointer;
+          margin: 0 10px;
+          opacity: .7;
+          font-size: $font-xl-36;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    > div:last-child {
+      display: flex;
+      justify-content: space-between;
+
+      > button {
+        border: none;
+        cursor: pointer;
+        height: 30px;
+        width: 80px;
+        font-weight: 600;
+        opacity: .6;
+        background-color: $bg-blue-400;
+        color: $white;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+}
+
+.dark_theme {
+  background-color: $gray-light-800 !important;
+  textarea {
+    background-color: $gray-light-600 !important;
+    color: $white;
+  }
+}
+

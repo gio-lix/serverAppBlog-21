@@ -1,0 +1,84 @@
+@import "src/styles/variables";
+.search {
+  position: relative;
+
+  > input {
+    border: none;
+    outline: none;
+    width: 300px;
+    border-bottom: 1.4px solid $gray-light-400;
+    padding-left: 20px;
+    padding-right: 18px;
+    padding-bottom: 5px;
+  }
+
+  > div {
+    position: absolute;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    padding: 0 2px;
+    left: 50%;
+    bottom: -4px;
+    z-index: 2;
+    transform: translateX(-50%);
+    font-size: $font-md-12;
+    color: $gray-light-500;
+    background-color: $bg-white;
+
+    > span {
+      display: flex;
+      align-items: center;
+    }
+
+
+  }
+  .spinner {
+    position: absolute;
+    top: -1px;
+    width: 20px;
+    right: 4px!important;
+  }
+  .close {
+    font-size: 27px;
+    top: -5px;
+    right: 5px;
+    cursor: pointer;
+    color: $gray-light-500;
+    font-weight: 600;
+
+    &:hover {
+      color: $gray-light-600;
+    }
+  }
+
+  .user {
+    position: absolute;
+    z-index: 12;
+    top: 50px;
+    max-height: 500px;
+    overflow-y: auto;
+
+
+    a {
+      color: $gray-light-600;
+    }
+  }
+}
+.search_dark {
+  > input {
+    background: transparent!important;
+    color: white;
+  }
+  .icon {
+    background-color: #3a3754!important;
+  }
+  .user {
+    a {
+      //color: white!important;
+    }
+  }
+}

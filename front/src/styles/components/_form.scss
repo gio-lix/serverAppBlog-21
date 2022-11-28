@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+
+.navigation {
+  margin-top: 20px;
+  text-align: center;
+  font-size: $font-md-15;
+  color: $gray-light-500;
+
+  a {
+    text-decoration: none;
+    color: $bg-blue-600;
+    opacity: .9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.activeBorder {
+  border: 1px solid $bg-green-600 !important;
+}
+.cover {
+  opacity: .5!important;
+  cursor: inherit!important;
+}
